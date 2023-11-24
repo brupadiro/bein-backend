@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions",
+  "info": {
+    "singularName": "transaction",
+    "pluralName": "transactions",
+    "displayName": "Transaction",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "transaction_id": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "producer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::producer.producer"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "success",
+        "error",
+        "pending"
+      ],
+      "default": "pending"
+    },
+    "payment_method": {
+      "type": "enumeration",
+      "enum": [
+        "Prometeo",
+        "Bamboo"
+      ]
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

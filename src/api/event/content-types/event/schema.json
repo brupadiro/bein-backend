@@ -1,0 +1,86 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Eventos",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "title": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "float"
+    },
+    "lng": {
+      "type": "float"
+    },
+    "main_picture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "portrait": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "producer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::producer.producer"
+    },
+    "hour": {
+      "type": "string"
+    },
+    "ticket_types": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ticket-type.ticket-type"
+    },
+    "description": {
+      "type": "text"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "normal",
+        "producer"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Aprobado",
+        "Rechazado"
+      ]
+    },
+    "total_tickets": {
+      "type": "integer"
+    }
+  }
+}

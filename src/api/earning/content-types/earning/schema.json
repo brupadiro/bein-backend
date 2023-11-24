@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "earnings",
+  "info": {
+    "singularName": "earning",
+    "pluralName": "earnings",
+    "displayName": "Earnings",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "amount": {
+      "type": "integer"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::event.event"
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "UYU",
+        "USD"
+      ]
+    }
+  }
+}

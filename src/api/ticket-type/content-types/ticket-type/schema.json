@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ticket_types",
+  "info": {
+    "singularName": "ticket-type",
+    "pluralName": "ticket-types",
+    "displayName": "TicketType",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "cant": {
+      "type": "integer"
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "UYU",
+        "USD"
+      ]
+    }
+  }
+}

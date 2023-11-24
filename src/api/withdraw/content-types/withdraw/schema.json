@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "withdraws",
+  "info": {
+    "singularName": "withdraw",
+    "pluralName": "withdraws",
+    "displayName": "Retiros",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "total_amount": {
+      "type": "integer"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::event.event"
+    },
+    "producer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::producer.producer"
+    },
+    "Banco": {
+      "type": "string"
+    },
+    "nro_cuenta": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Aprobado",
+        "Pendiente",
+        "Rechazado"
+      ]
+    },
+    "amount": {
+      "type": "decimal"
+    }
+  }
+}

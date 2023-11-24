@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_producers_users",
+  "info": {
+    "displayName": "users"
+  },
+  "options": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "admin",
+        "editor"
+      ]
+    }
+  }
+}
